@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PlayForge</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>PlayForge</h1>
+  </header>
+
+  <nav>
+    <button onclick="loadGame('tic-tac-toe')">Tic Tac Toe</button>
+    <button onclick="loadGame('rock-paper-scissor')">Rock Paper Scissors</button>
+    <button onclick="loadGame('memory-game')">Memory Game</button>
+    <button onclick="loadGame('snake-game')">Snake Game</button>
+    <button onclick="loadGame('whack-a-mole')">Whack-a-Mole</button>
+    <button onclick="loadGame('flappy-bird')">Flappy Bird</button>
+    <button onclick="loadGame('hangman')">Hangman</button>
+  </nav>
+
+  <main>
+    <div id="game-container">
+      <p>Select a game to start playing!</p>
+      <canvas id="snake-canvas" width="400" height="400"></canvas>  <!-- Snake Game Canvas -->
+      <p id="snake-score">Score: 0</p>  <!-- Displaying score -->
+      <p id="snake-high-score">High Score: 0</p>
+      <button id="start-game" onclick="startGame()">Start Game</button>  <!-- Start button -->
+    </div>
+
+    <!-- Popup for game results -->
+    <div id="popup" class="hidden">
+      <div id="popup-content">
+        <h2 id="popup-message"></h2>
+        <button id="restart-game" onclick="startGame()">Restart Game</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+  <script src="backend.js"></script>
+</body>
+</html>
